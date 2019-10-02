@@ -14,4 +14,23 @@ header a {
   color: #50fa7b;
   text-decoration: none;
 }
+
+.calculator {
+  width: 450px;
+  height: 550px;
+  background: #6272a4;
+  margin: 0 auto;
+  border-radius: .5em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.visor {
+  height: 100px;
+  width: 350px;
+  background-color: #44475a;
+  border-radius: 1em;
+  margin: 15px auto;
+}
 /*# sourceMappingURL=style.css.map */
