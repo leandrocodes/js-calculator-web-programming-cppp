@@ -74,5 +74,18 @@ header a {
   border-radius: .5em;
   -webkit-box-shadow: 2px 2px 2px 1px #3a2e4b;
           box-shadow: 2px 2px 2px 1px #3a2e4b;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+}
+
+.key:hover {
+  cursor: pointer;
+}
+
+.key:active {
+  -webkit-box-shadow: 1px .5px 1px .5px #3a2e4b;
+          box-shadow: 1px .5px 1px .5px #3a2e4b;
+  background: #a280d3;
+  color: #edf5a4;
 }
 /*# sourceMappingURL=style.css.map */
