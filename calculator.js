@@ -12,12 +12,11 @@ let multi = document.getElementById('multi')
 
 let filled = false
 
-const addToVisor = key =>{
-  let arr = []
-  arr.push(firstNum.innerText)
-  arr.push(secNum.innerText)
 
-  if(arr.length < 1 && (key === '+' || key === '-' || key === 'x' || key === '÷' || key === '.' ) ){ 
+const addToVisor = key =>{
+  let nums = firstNum.innerText
+
+  if(nums.length < 1 && (key === '+' || key === '-' || key === 'x' || key === '÷' || key === '.' ) ){ 
     console.log(`nao pode ainda`)
   } else {
     if(typeof key == 'number' && filled === false)
@@ -38,7 +37,8 @@ const addToVisor = key =>{
 }
 
 const clearVisor = () => {
-  firstNum.innerText = ''
-  secNum.innerText = ''
+  firstNum.innerHTML = ''
   operator.innerText = ''
+  secNum.innerText = ''
+  filled = false
 }
