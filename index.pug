@@ -15,26 +15,29 @@ html(lang='pt-br')
     
     div.calculator
       div.visor
-        p
+        p.firstNumber
+        p.operator
+        p.secondNumber
+        p.result
       div.keys
         div.key#clear(onclick="clearVisor()") C
         .break
         div.key#7(onclick="addToVisor(7)") 7
         div.key#8(onclick="addToVisor(8)") 8
         div.key#9(onclick="addToVisor(9)") 9
-        div.key.operato#multi x
+        div.key.operator#multi(onclick="addToVisor('x')") x
         div.key#4(onclick="addToVisor(4)") 4
         div.key#5(onclick="addToVisor(5)") 5
         div.key#6(onclick="addToVisor(6)") 6
-        div.key.operator#sub -
+        div.key.operator#sub(onclick="addToVisor('-')") -
         div.key#1(onclick="addToVisor(1)") 1
         div.key#2(onclick="addToVisor(2)") 2
         div.key#3(onclick="addToVisor(3)") 3
-        div.key.operator#plus +
+        div.key.operator#plus(onclick="addToVisor('+')") +
         div.key#0(onclick="addToVisor(0)") 0
-        div.key#dot .
+        div.key#dot(onclick="addToVisor('.')") .
         div.key#equal =
-        div.key.operator#div ÷
+        div.key.operator#div(onclick="addToVisor('÷')") ÷
       
     script(src="https://kit.fontawesome.com/ac8cf42b03.js")
     script(src="calculator.js")

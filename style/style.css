@@ -46,6 +46,10 @@ header a {
           align-items: center;
 }
 
+.visor p {
+  margin-right: 5px;
+}
+
 .keys {
   height: 65%;
   width: 75%;
