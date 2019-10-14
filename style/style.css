@@ -31,11 +31,19 @@ header a {
 }
 
 .visor {
-  height: 100px;
+  padding: 1em;
+  height: 50px;
   width: 350px;
   background-color: #44475a;
   border-radius: .3em;
   margin: 15px auto;
+  font-size: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .keys {
@@ -86,5 +94,16 @@ header a {
   -webkit-box-shadow: .51px .5px .5px .25px #3a2e4b;
           box-shadow: .51px .5px .5px .25px #3a2e4b;
   background: #a280d3;
+}
+
+.break {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+#clear {
+  margin-right: 225px;
+  background: #ff5555;
+  color: #f8f8f2;
 }
 /*# sourceMappingURL=style.css.map */

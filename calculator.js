@@ -12,6 +12,10 @@ let plus = document.getElementById('plus')
 let sub = document.getElementById('sub')
 let multi = document.getElementById('multi')
 
-const addToVisor = (number) =>{
+const addToVisor = number =>{
   textVisor.innerText += number 
+}
+
+const clearVisor = () => {
+  textVisor.innerText = ''
 }
