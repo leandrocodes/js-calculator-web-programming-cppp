@@ -11,3 +11,7 @@ let division = document.getElementById('div')
 let plus = document.getElementById('plus')
 let sub = document.getElementById('sub')
 let multi = document.getElementById('multi')
+
+const addToVisor = (number) =>{
+  textVisor.innerText += number 
+}
