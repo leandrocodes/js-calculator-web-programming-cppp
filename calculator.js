@@ -39,5 +39,6 @@ const addToVisor = key =>{
 
 const clearVisor = () => {
   firstNum.innerText = ''
+  secNum.innerText = ''
   operator.innerText = ''
 }
