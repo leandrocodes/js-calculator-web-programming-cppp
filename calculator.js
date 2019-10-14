@@ -7,3 +7,7 @@ for (let index = 0; index < 10; index++) {
 }
 
 let dot = document.getElementById('dot')
+let division = document.getElementById('div')
+let plus = document.getElementById('plus')
+let sub = document.getElementById('sub')
+let multi = document.getElementById('multi')
