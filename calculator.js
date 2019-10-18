@@ -16,10 +16,11 @@ var dotFilled = false
 
 
 const addToVisor = key =>{
+  result.innerText = ''
   let nums = firstNum.innerText
 
-  if(nums.length < 1 && (key === '+' || key === '-' || key === 'x' || key === '÷' || key === '.' ) ){ 
-    console.log(`nao pode ainda`)
+  if(nums.length < 1 && (key === '+' || key === '-' || key === 'x' || key === '÷' || key === '.' || key === '^')){ 
+    result.innerText = 'Operação inválida'
   } else {
     if(typeof key == 'number' && filled === false)
       firstNum.innerText += key
@@ -47,13 +48,27 @@ const addDot = () =>{
 }
 
 const calculate = () =>{
-  if(operator.innerText === 'x'){
+  if(operator.innerText === 'x')
     result.innerText = firstNum.innerText * secNum.innerText
-  }
-
+  else if (operator.innerText === '+')
+    result.innerText = Number(firstNum.innerText) + Number(secNum.innerText)
+  else if (operator.innerText === '-')
+    result.innerText = firstNum.innerText - secNum.innerText
+  else if (operator.innerText === '^')
+    result.innerText = Math.pow(firstNum.innerText, secNum.innerText)
+  else if (operator.innerText === '÷'){
+    if(secNum.innerText == 0){
+      result.innerText = 'Operação Inválida'
+    } else
+      result.innerText = firstNum.innerText / secNum.innerText
+  } else
+    result.innerText = 'Operação inválida'
+    
   firstNum.innerHTML = ''
   operator.innerText = ''
   secNum.innerText = ''
+  filled = false
+  dotFilled = false
 }
 
 const clearVisor = () => {
