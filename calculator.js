@@ -28,13 +28,10 @@ const addToVisor = key =>{
       operator.innerText = key
       filled = true
       dotFilled = false
-    }
-    else if (typeof key == 'number' && filled === true){
+    } else if (typeof key == 'number' && filled === true)
       secNum.innerText += key
-    }
-    else if (typeof key == 'string' && key === '.' && filled === false){
+    else if (typeof key == 'string' && key === '.' && filled === false)
       firstNum.innerText += key
-    }
     else 
       secNum.innerText += key
   }
