@@ -1,17 +1,18 @@
-let textVisor = document.querySelector('.visor')
+var textVisor = document.querySelector('.visor')
 
-let firstNum = document.querySelector('.firstNumber')
-let secNum = document.querySelector('.secondNumber')
-let operator = document.querySelector('.operator')
-let result = document.querySelector('.result')
+var firstNum = document.querySelector('.firstNumber')
+var secNum = document.querySelector('.secondNumber')
+var operator = document.querySelector('.operator')
+var result = document.querySelector('.result')
 
-let dot = document.getElementById('dot')
-let division = document.getElementById('div')
-let plus = document.getElementById('plus')
-let sub = document.getElementById('sub')
-let multi = document.getElementById('multi')
+var dot = document.getElementById('dot')
+var division = document.getElementById('div')
+var plus = document.getElementById('plus')
+var sub = document.getElementById('sub')
+var multi = document.getElementById('multi')
 
-let filled = false
+var filled = false
+var dotFilled = false
 
 
 const addToVisor = key =>{
@@ -25,14 +26,23 @@ const addToVisor = key =>{
     else if (typeof key == 'string' && key !== '.'){
       operator.innerText = key
       filled = true
+      dotFilled = false
     }
     else if (typeof key == 'number' && filled === true){
       secNum.innerText += key
     }
-    else if (typeof key == 'string' && key === '.' && filled === false)
+    else if (typeof key == 'string' && key === '.' && filled === false){
       firstNum.innerText += key
+    }
     else 
       secNum.innerText += key
+  }
+}
+
+const addDot = () =>{
+  if(!dotFilled){
+    dotFilled = true
+    addToVisor('.')
   }
 }
 
@@ -52,4 +62,5 @@ const clearVisor = () => {
   secNum.innerText = ''
   result.innerText = ''
   filled = false
+  dotFilled = false
 }
