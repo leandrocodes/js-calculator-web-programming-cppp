@@ -3,6 +3,7 @@ let textVisor = document.querySelector('.visor')
 let firstNum = document.querySelector('.firstNumber')
 let secNum = document.querySelector('.secondNumber')
 let operator = document.querySelector('.operator')
+let result = document.querySelector('.result')
 
 let dot = document.getElementById('dot')
 let division = document.getElementById('div')
@@ -33,12 +34,22 @@ const addToVisor = key =>{
     else 
       secNum.innerText += key
   }
-  
+}
+
+const calculate = () =>{
+  if(operator.innerText === 'x'){
+    result.innerText = firstNum.innerText * secNum.innerText
+  }
+
+  firstNum.innerHTML = ''
+  operator.innerText = ''
+  secNum.innerText = ''
 }
 
 const clearVisor = () => {
   firstNum.innerHTML = ''
   operator.innerText = ''
   secNum.innerText = ''
+  result.innerText = ''
   filled = false
 }
